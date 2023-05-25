@@ -1,0 +1,85 @@
+/*******
+ * Main
+ *******/
+ .main {
+	padding-bottom: 60px;
+	margin-bottom: -60px;
+	min-height: 100%;
+}
+	.main>.intro {
+		padding: 30px 15px 50px;
+		text-align: center;
+		margin: 0 auto;
+		max-width: 490px;
+	}
+		.main>.intro>h2 {
+			color: #000;
+			font-weight: bold;
+		}
+	.main>.work {
+		padding: 50px 15px;
+	}
+		.main>.work>.inner {
+			margin: 0 auto;
+			max-width: 600px;
+		}
+		.main>.work>.inner>h3 {
+			color: #f80;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+	.main>.work-odd {
+			background-color: #f5f5f5;
+	}
+	.main>.services {
+		padding: 15px;
+	}
+	.main>.services>.know-how {
+		padding: 15px 0;
+		text-align: center;
+	}
+		.main>.services>.know-how>.inner {
+			background-color: #f5f5f5;
+			display: block;
+			padding: 15px;
+			margin: 0 auto;
+			max-width: 300px;
+			text-align: center;
+		}
+			.main>.services>.know-how>.inner>h3 {
+				margin-top: 10px;
+			}
+			.main>.services>.know-how>.inner>.glyphicon {
+				font-size: 30px;
+			}
+@media (min-width: 768px) {
+	.main {
+		margin: 0 auto -60px;
+		max-width: 920px;
+	}
+		.main>.intro {
+			padding: 60px 15px;
+		}
+			.main>.intro>h2 {
+				margin-bottom: 30px;
+			}
+		.main>.services {
+			margin-top: 50px;
+		}
+			.main>.services>.know-how {
+				float: left;
+				padding: 15px;
+				width: 50%;
+			}
+				.main>.services>.know-how>.inner {
+					height: 290px;
+				}
+}
+@media (min-width: 1200px) {
+	.main {
+		max-width: 100%;
+	}
+		.main>.services>.know-how {
+			width: 25%;
+		}
+}
