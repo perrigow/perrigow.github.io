@@ -1,0 +1,14 @@
+#mainNav {
+  height: 100vh;
+  width: 280px;
+  min-width: 280px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+section.page {
+  height: 100vh;
+  padding: 1.5rem;
+}
