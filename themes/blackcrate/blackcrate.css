@@ -1,14 +1,27 @@
+/*
+[data-bs-theme=dark] {
+  color-scheme: dark;
+  --bs-body-color: var(--bs-yellow);
+}
+*/
+
+:root {
+  /* --bs-body-bg: var(--bs-tertiary-bg); */
+  --bs-navbar-active-color: var(--bs-orange);
+  --bs-heading-color: var(--bs-emphasis-color);
+}
+
 #mainNav {
   height: 100vh;
   width: 280px;
   min-width: 280px;
 }
-
+/*
 .nav-link.active {
-  text-decoration: underline;
+  color: var(--bs-orange);
 }
-
+*/
 section.page {
-  height: 100vh;
+  min-height: 100vh;
   padding: 1.5rem;
 }
