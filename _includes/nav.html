@@ -1,10 +1,28 @@
-{% assign menu_pages = site.pages | where_exp: "page", "page.nav_pos != nil" | sort: "nav_pos" -%}
-<nav>
-  <ul class="nav nav-justified">
-  {%- for menu_page in menu_pages %}
-    <li class="{% if menu_page.title == page.title %}active{% endif %}">
-      <a href="{{ menu_page.url | relative_url}}">{{ menu_page.title }}</a>
+{% assign sections = site.sections | where_exp: "section", "section.nav_pos != nil" | sort: "nav_pos" -%}
+<nav
+  id="mainNav"
+  class="d-flex flex-column p-3 border-end border-dark-subtle offcanvas-md offcanvas-start sticky-md-top"
+  tabindex="-1"
+  aria-labelledby="mainNavLabel">
+
+  <a href="{{ '/' | relative_url }}" class="nav-link text-center">
+    <img
+      src="https://github.com/perrigow.png"
+      alt=""
+      class="rounded-circle"
+      width="200"
+      height="200">
+    <h2 class="mt-3">Wayne Perrigo</h2>
+  </a>
+  <hr>
+  <ul class="navbar-nav fs-4 text-center">
+  {%- for section in sections %}
+    <li class="nav-item">
+      <a href="{{ '/' | relative_url }}#{{ section.title | downcase }}" class="nav-link">{{ section.title }}</a>
     </li>
   {%- endfor %}
   </ul>
+  <div class="mt-auto text-center">
+    This site and images are<br>Copyright &copy;<span id="copy-year"></span> BlackCrate.net.
+  </div>
 </nav>

@@ -1,51 +1,7 @@
 ---
-title: About
 permalink: /
-nav_pos: 0
 ---
-<div class="intro">
-	<h2>I'm Wayne.</h2>
-	<br>
-	<h4>
-	I have a passion for writing software,
-	and I can design and develop what you need.
-	</h4>
-</div>
-<div class="services clearfix">
-	<div class="know-how">
-		<div class="inner">
-			<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-			<h3>Web Services</h3>
-			<hr>
-			<p>I specialize in developing web services, useful for any
-			application and can be scaled up to handle any amount of data.</p>
-		</div>
-	</div>
-	<div class="know-how">
-		<div class="inner">
-			<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-			<h3>Web Sites</h3>
-			<hr>
-			<p>By utilizing the latest technologies, I can develop your website
-			to run on any device and that can be easily updated.</p>
-		</div>
-	</div>
-	<div class="know-how">
-		<div class="inner">
-			<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
-			<h3>Web Applications</h3>
-			<hr>
-			<p>I develop useful web applications, that work as a standalone
-			product or that work as part of a larger system.</p>
-		</div>
-	</div>
-	<div class="know-how">
-		<div class="inner">
-			<span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span>
-			<h3>Desktop Applications</h3>
-			<hr>
-			<p>Need a desktop application? I can develop your desktop application
-			to do anything and run on any system.</p>
-		</div>
-	</div>
-</div>
+{% assign sections = site.sections | where_exp: "section", "section.nav_pos != nil" | sort: "nav_pos" -%}
+{%- for section in sections %}
+{{ section.content }}
+{%- endfor %}

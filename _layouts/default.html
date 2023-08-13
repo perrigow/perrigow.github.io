@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,64 +18,48 @@
 
     <!-- Bootstrap -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ site.baseurl }}{{ site.theme_path}}blackcrate.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}{{ site.theme_path }}blackcrate.css">
   </head>
   <body>
-    <div class="page">
-			<div class="logo-nav clearfix">
-				<div class="inner">
-          {% include logo.html -%}
-					{% include nav.html -%}
-				</div>
-			</div>
+    <div
+      class="container p-0 d-flex"
+      data-bs-spy="scroll"
+      data-bs-target="#mainNav"
+      data-bs-root-margin="0px 0px -70%"
+      data-bs-smooth-scroll="true"
+      tabindex="0">
 
-			<div class="content">
-        <div class="main clearfix">
-          {{ content }}
-        </div>
+      {% include nav.html -%}
 
-        <footer class="footer">
-					<p>
-						This site and logo are Copyright &copy;<span id="copy-year"></span> Blackcrate.net.
-            View project on <a href="{{ site.github.repository_url }}">GitHub</a>
-					</p>
-				</footer>
-			</div>
-		</div>
-    <!--
-    <div id="container" class="mb-3">
-      {% include header.html %}
-      <section id="main">
-        <div class="inner clearfix">
-          {% include nav.html -%}
-          <section id="content">
-            <div class="inner">{{ content }}</div>
-          </section>
-        </div>
-      </section>
-      {% include footer.html %}
+      <div class="flex-grow-1">
+        <button
+          class="btn btn-link sticky-top float-end pt-3 d-md-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav">
+
+          <i class="bi bi-list text-body fs-1"></i>
+        </button>
+
+        {{ content }}
+
+      </div>
     </div>
-    -->
-    <!-- /container -->
 
     <!-- Include Bootstrap -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"></script>
-
-    <!-- Select Nav -->
-    <script src="{{ site.baseurl }}{{ site.theme_path}}/assets/js/selectnav.js"></script>
 
     <script>
       var copy_year = new Date().getFullYear();

@@ -1,50 +1,8 @@
 /*************
  * Navigation
  *************/
- .nav {
-	margin-top: 20px;
-}
-	.nav>li {
-		display: table-cell;
-		width: 1%;
-	}
-	.nav>li>a {
-		color: #bfbfbf;
-		padding: 8px 0;
-		text-decoration: none;
-	}
-	.nav>li>a:hover,
-	.nav>li>a:focus,
-	.nav>li.active>a {
-		color: #f80;
-		background: none;
-	}
-@media (min-width: 768px) {
-  .nav {
-		padding-bottom: 100px;
-		margin: 0;
-	}
-	.nav>li {
-		position: relative;
-		display: block;
-		border-bottom: 1px solid #2e2f30;
-		width: 100%;
-	}
-	.nav>li>a {
-		display: block;
-		font-weight: bold;
-		padding: 18px 0;
-		text-align: left;
-	}
-	.nav>li>a:after {
-		content: "\F285";
-		position: absolute;
-		top: 0;
-		right: 0;
-		padding: 18px 0;
-    z-index: -1;
-    font-family: 'bootstrap-icons';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-	}
+ #mainNav {
+  height: 100vh;
+  width: 280px;
+  min-width: 280px;
 }
