@@ -1,0 +1,90 @@
+---
+title: Projects
+nav_pos: 1
+---
+<section id="{{ page.title | downcase }}" class="page">
+	<div class="text-center">
+		<h1>Projects</h1>
+		<p class="fs-5 my-5">
+			A subset of tools and sites I've created, designed to be intuitive and useful.
+		</p>
+	</div>
+
+	<div>
+		<div class="card mb-5">
+			<h5 class="card-header">
+				AJ &amp; Dennis Gregory Memorial Doubles Site
+			</h5>
+			<div class="card-body">
+				<p class="card-text">
+					A website built using Jekyll, used to display league information for a doubles
+					bowling league. Most bowlers will print out the standings sheets for themselves,
+					allowing us to print one standings sheet per pair.
+				</p>
+				<a href="https://github.com/perrigow/wnd/" class="card-link icon-link">
+					<i class="bi-github"></i>
+					GitHub
+				</a>
+				<a href="https://wnd.blackcrate.net/" class="card-link icon-link">
+					<i class="bi-window"></i>
+					Website
+				</a>
+			</div>
+		</div>
+
+		<div class="card mb-5">
+			<h5 class="card-header">
+				BLS to Bowling Brackets / Sidepots
+			</h5>
+			<div class="card-body">
+				<p class="card-text">
+					Helper script for converting BLS rosters into a Bowling Brackets / Sidepots (B*BS) compatible import file.
+				</p>
+				<p class="card-text">
+					The script is written as a Windows batch file. It takes in a weekly report from BLS and a Regulars file
+					to produce a B*BS compatible CSV (comma separated value) file.
+				</p>
+				<p class="card-text">
+					The script performs the following:
+					<ul>
+						<li>Removes the bk (book avg indicator) from the beginning of average</li>
+						<li>Sets the team to '0' for subs, those not in the Requlars file</li>
+						<li>Removes next weeks lane assignment for subs</li>
+					</ul>
+				</p>
+				<a href="https://github.com/perrigow/bls-bbs/" class="card-link icon-link">
+					<i class="bi-github"></i>
+					GitHub
+				</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<h5 class="card-header">
+				BLS Image Stitcher
+			</h5>
+			<div class="card-body">
+				<p class="card-text">
+					Helper script to vertically stitch together standings sheet images produced by BLS.
+				</p>
+				<p class="card-text">
+					The script is written as a Windows batch file. With the help of ImageMagick, the script
+					takes a series of images (e.g. standings sheets) exported by BLS and produces a single
+					image of those images stitched vertically. The single image can then be displayed on the web.
+				</p>
+				<p class="card-text">
+					The script performs the following:
+					<ul>
+						<li>Stitches (appends) the images vertically into a single image</li>
+						<li>Deletes the original images after completion</li>
+					</ul>
+				</p>
+				<a href="https://github.com/perrigow/bls-image-stitcher/" class="card-link icon-link">
+					<i class="bi-github"></i>
+					GitHub
+				</a>
+			</div>
+		</div>
+
+	</div>
+</section>

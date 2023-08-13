@@ -1,0 +1,7 @@
+---
+permalink: /
+---
+{% assign sections = site.sections | where_exp: "section", "section.nav_pos != nil" | sort: "nav_pos" -%}
+{%- for section in sections %}
+{{ section.content }}
+{%- endfor %}
