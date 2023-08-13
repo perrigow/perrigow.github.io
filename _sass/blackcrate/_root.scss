@@ -21,3 +21,15 @@
   --bs-btn-disabled-border-color: var(--bs-orange);
   --bs-gradient: none;
 }
+
+.btn-labeled {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.btn-label {
+	display: inline-block;
+  margin-right: .5rem;
+  padding: .5rem .5rem .5rem 0;
+  border-right: solid 1px rgba(var(--bs-link-color-rgb), 0.5);
+}
