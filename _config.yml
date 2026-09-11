@@ -19,13 +19,14 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Wayne Perrigo (perrigow)
+# email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   A website for perrigow on GitHub Pages.
 # baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+github_username: perrigow
 theme_path: /themes/blackcrate/
-# email: your-email@example.com
-
 defaults:
   - scope:
       type: "pages"
@@ -60,3 +61,7 @@ theme: null
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - CNAME
+  - LICENSE
+  - README.md
